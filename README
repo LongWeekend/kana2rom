@@ -1,0 +1,33 @@
+kana2rom
+========
+
+A Ruby module for converting between hiragana, katakana and romaji.
+
+Authors
+-------
+Originally written by the mysterious and uncontacblae K.Kodama in June 2002.
+Kodama distributed this work freely in the sense of GNU General Public License.
+http://www.gnu.org/licenses/gpl.html
+
+Repaired and extended to support modern Ruby versions 1.86+ and got rid of ridiculous
+transliterations that non-Japanese readers of romaji find abhorrent (e.g. syuu, ti).
+Since romaji exists for the benefit of non-Japanese people, this seems logical.
+
+Usage
+------
+Inside your Ruby script file put this:
+  `include kana2rom`
+
+To call a conversion method, just pass in a string like this:
+  `kana2rom(str)`
+
+Module Methods
+--------------
+
+ kana2rom(str)    ##  かな --> ロ－マ字 変換   /   hira/katakana --> romaji conv
+ rom2kata(str)    ## ロ－マ字 --> 片仮名 変換   /   romaji --> katakana　conv
+ rom2hira(str)    ## ロ－マ字 --> 平仮名 変換   /   romaji　--> hiragana conv
+ hira2kata(str)   ## 平仮名 --> 片仮名 変換    /   hiragana --> katakana conv
+ kata2hira(str)   ## 片仮名 --> 平仮名 変換    /   katakana --> hiragana conv
+ kana2kana(str)   ## attempts either to either, returns unique strings only
+
